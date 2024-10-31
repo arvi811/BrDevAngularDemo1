@@ -36,4 +36,8 @@ export class AppComponent {
   updateData() {
     this.data = Math.floor(Math.random() * 100);
   }
+
+  test(){
+    console.log('test');
+  }
 }
