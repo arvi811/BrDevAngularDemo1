@@ -3,3 +3,13 @@
     color: #fff;
     padding: 1em;
 }
+
+body{
+    background-color: #222;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { MakeFunctionComponent } from './components/make-function/make-function.component';
@@ -23,14 +23,16 @@ import { ChildComponent } from './components/child/child.component';
     SwitchComponent,
     NgForComponent,
     StyleBindingComponent,
-    ChildComponent,
+    ChildComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  
   title = 'Training';
   data = 50;
+  
 //test
   //for Passing Data on Child component test git commit test
   updateData() {
@@ -38,6 +40,6 @@ export class AppComponent {
   }
 
   test(){
-    // console.log('test');
+     console.log('test');
   }
 }
