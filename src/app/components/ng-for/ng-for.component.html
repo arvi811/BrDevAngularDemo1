@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<h3 *ngFor="let item of users">Name is : {{ item }}</h3>
+
+<h3 *ngFor="let item of userDetails">
+  Detail : {{ item.name }} - {{ item.gender }} - {{ item.number }}
+</h3>

@@ -1,0 +1,35 @@
+<h1>{{ title }}</h1>
+<br /><br />
+<span>Show Data: {{ show }}</span
+><br /><br />
+<h1 *ngIf="show; then ifBlock; else elseBlock"></h1>
+
+<ng-template #ifBlock>
+  <div class="btn btn-warning">
+    <h1>IF condition</h1>
+  </div>
+</ng-template>
+
+<ng-template class="btn btn-warning" #elseBlock>
+  <div class="btn btn-warning">
+    <h1>Else condition</h1>
+  </div>
+</ng-template>
+
+<br />
+<br />
+<button class="btn btn-primary" (click)="setBool()">Set Button</button>
+
+<br />
+<br />
+<br />
+<br />
+
+<div *ngIf="show" class="btn btn-success">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quod
+    provident corporis maiores molestiae laboriosam nemo, quam veritatis officia
+    nobis accusamus quas possimus quisquam maxime temporibus similique amet,
+    minus vel?
+  </p>
+</div>

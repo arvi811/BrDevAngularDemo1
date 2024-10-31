@@ -1,0 +1,25 @@
+<div>
+    <button class="btn btn-primary" (click)="testNoParam()">
+      Button No Parameters
+    </button>
+  </div>
+  <br />
+  <div>
+    <button class="btn btn-success" (click)="testParams('Sample Data')">
+      Button With Parameters
+    </button>
+  </div>
+  <br />
+  <div>
+    <button style="margin: 20px" class="btn btn-warning" (click)="showName()">
+      Button With Input Value
+    </button>
+  
+    <input
+      placeholder="Input Name"
+      #inputName
+      type="text"
+      (keyup)="getInputValue(inputName.value)"
+    />
+  </div>
+  

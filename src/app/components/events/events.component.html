@@ -1,0 +1,21 @@
+<input
+  style="margin: 12px"
+  type="text"
+  #box1
+  placeholder="KeyUp box"
+  (keyup)="getData1(box1.value)"
+/><span>Data: {{ myData1 }}</span> <br /><br />
+<input
+  style="margin: 12px"
+  type="text"
+  #box2
+  placeholder="KeyDown box"
+  (keydown)="getData2(box2.value)"
+/><span>Data: {{ myData2 }}</span> <br /><br />
+<input
+  style="margin: 12px"
+  type="text"
+  #box3
+  placeholder="Blur box"
+  (blur)="getData3(box3.value)"
+/><span>Data: {{ myData3 }}</span>

@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<!-- apply CommonModule -->
+<div [ngSwitch]="color">
+  <h1 *ngSwitchCase="'red'" style="color: red">Red Color</h1>
+  <h1 *ngSwitchCase="'blue'" style="color: blue">Blue Color</h1>
+  <h1 *ngSwitchCase="'green'" style="color: green">Green Color</h1>
+</div>
+
+<button class="btn btn-success m-2" (click)="turnGreen()">Green Button</button>
+
+<button class="btn btn-primary m-2" (click)="turnBlue()">Blue Button</button>
+
+<button class="btn btn-danger m-2" (click)="turnRed()">Red Button</button>
