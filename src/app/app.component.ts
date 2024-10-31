@@ -31,7 +31,7 @@ import { ChildComponent } from './components/child/child.component';
 export class AppComponent {
   title = 'Training';
   data = 50;
-
+//test
   //for Passing Data on Child component test git commit test
   updateData() {
     this.data = Math.floor(Math.random() * 100);
