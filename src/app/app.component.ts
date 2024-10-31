@@ -32,7 +32,7 @@ export class AppComponent {
   title = 'Training';
   data = 50;
 
-  //for Passing Data on Child component test
+  //for Passing Data on Child component test git commit test
   updateData() {
     this.data = Math.floor(Math.random() * 100);
   }
