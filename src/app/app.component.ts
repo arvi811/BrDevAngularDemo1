@@ -38,6 +38,6 @@ export class AppComponent {
   }
 
   test(){
-    console.log('test');
+    // console.log('test');
   }
 }
