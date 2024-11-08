@@ -4,8 +4,8 @@
 <br />
 
 <div style="text-align: center">
+  <!-- Lesson1 -->
   <!-- Put Training Components sample Here -->
-
   <!-- <app-make-function></app-make-function> -->
   <!-- <app-events></app-events> -->
   <!-- <app-property-binding></app-property-binding> -->
@@ -13,11 +13,100 @@
   <!-- <app-switch></app-switch> -->
   <!-- <app-ng-for></app-ng-for> -->
   <!-- <app-style-binding></app-style-binding> -->
-
+  <!-- <app-data-binding></app-data-binding> -->
   <!-- <app-child [item]="data"></app-child>
   <button class="btn btn-primary" (click)="updateData()">Update Data</button> -->
-  <h1>-------------------------------------------------------</h1>
 
-  <!-- <app-data-binding></app-data-binding> -->
+  <!-- Lesson2 -->
+  <ul *ngFor="let user of userList">
+    <app-reusable-component [item]="user"></app-reusable-component>
+  </ul>
+
+  <h1>-------------------------------------------------------</h1>
+  <h3>this is from parent component</h3>
+  <h1>{{ data }}</h1>
+  <h1>-------------------------------------------------------</h1>
+  <app-child (updateDataEvent)="updateData2($event)"></app-child>
+
   <!-- Put Training Components sample Here -->
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>Two Way Binding</h1>
+  <input type="text" [(ngModel)]="twoWayBindingData" name="" id="" />
+  <br />
+  <h1>Data: {{ twoWayBindingData }}</h1>
+
+  <!-- //spacing -->
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>Template reference Variable</h1>
+  <input type="text" #box />
+  <button (click)="getVal(box.value)">Click me</button>
+
+  <!-- //spacing -->
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>Custom Pipes</h1>
+  <h2>{{ 81 | usdInr }}</h2>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>Template driven form(validation)</h1>
+
+  <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+    <input
+      type="text"
+      required
+      #name="ngModel"
+      name="name"
+      placeholder="Enter Name"
+      ngModel
+    />
+    <br />
+    <span *ngIf="name.invalid && name.touched" style="color: red"
+      >Please enter a valid input</span
+    >
+    <br />
+    <input
+      type="password"
+      #password="ngModel"
+      name="password"
+      minlength="4"
+      placeholder="Enter Password"
+      ngModel
+    />
+    <br /><span *ngIf="password.invalid && password.touched" style="color: red"
+      >Please enter a valid input</span
+    ><br />
+    <button [disabled]="loginForm.invalid">Log in</button>
+  </form>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>Reactive Form(validation)</h1>
+  <!-- 
+  <form []="loginForm" ]>
+    <input type="text" name="" id="" placeholder="enter name" />
+    <br /><br />
+    <input type="password" name="" id="" placeholder="enter password" />
+    <br /><br />
+    <button>Login</button>
+  </form> -->
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>Directives</h1>
+  <h2>{{ title }}</h2>
+  <h2 appAppRedEl>{{ title }}</h2>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h1>End</h1>
 </div>
